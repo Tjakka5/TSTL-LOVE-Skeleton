@@ -1,0 +1,22 @@
+{
+  "name": "tstl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "prebuild": "IF EXIST \"build\" RMDIR /s /q \"build\"",
+    "build": "npx tstl",
+    "postbuild": "npx copyfiles -u 1 -e **/*.ts src/**/*.* build",
+    "prestart": "npm run build",
+    "start": "lovec build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^2.3.0",
+    "cpx": "^1.5.0",
+    "love-typescript-definitions": "^0.20.2",
+    "lua-types": "^2.8.0",
+    "typescript-to-lua": "^0.34.0"
+  }
+}

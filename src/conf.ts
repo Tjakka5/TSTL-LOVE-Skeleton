@@ -1,0 +1,3 @@
+love.conf = (config): void => {
+
+};
